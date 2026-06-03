@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kocaeli Tanıtım Portalı — Tarih, Doğa ve Kültür</title>
+  <meta name="description" content="Kocaeli ilinin tarihçesi, coğrafi özellikleri, kültürel mirası, gezilecek yerleri ve yöresel lezzetlerini tanıtan responsive web sitesi.">
+  
+  <!-- CSS Dosyası Bağlantısı -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Üst Bilgi ve Navigasyon -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">Kocaeli</span>Portalı
+      </a>
+      
+      <!-- Koyu / Açık Tema Değiştirici (Tek Simge) -->
+      <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Temayı Değiştir">
+        <span class="theme-toggle-icon" id="themeToggleIcon">☀️</span>
+      </button>
+      
+      <!-- Mobil Menü Hamburger Butonu -->
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <!-- Navigasyon Linkleri -->
+      <nav class="nav" id="navBar">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link active">Ana Sayfa</a></li>
+          <li><a href="#genel-bilgiler" class="nav-link">Tarihçe & Genel</a></li>
+          <li><a href="#cografya" class="nav-link">Coğrafya</a></li>
+          <li><a href="#kultur" class="nav-link">Kültür</a></li>
+          <li><a href="#gezilecek-yerler" class="nav-link">Gezilecek Yerler</a></li>
+          <li><a href="#yemekler" class="nav-link">Yöresel Lezzetler</a></li>
+          <li><a href="#galeri" class="nav-link">Galeri</a></li>
+          <li><a href="#iletisim" class="nav-link">Öneri & İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- 3 Fotoğraflı Otomatik Hero (Karşılama) Slider Bölümü -->
+    <section id="hero" class="hero">
+      <div class="hero-slider" id="heroSlider">
+        <!-- Slayt 1 -->
+        <!-- Slayt 1 -->
+        <div class="hero-slide active">
+          <img src="assets/img/hero/kocaeli-hero-1.jpg" alt="İzmit Körfezi Gün Batımı" class="hero-img">
+          <div class="hero-overlay"></div>
+          <div class="container hero-content-container">
+            <div class="hero-content">
+              <h1 class="hero-title">Sanayinin Başkenti, Doğanın Kalbi: Kocaeli</h1>
+              <p class="hero-lead">Masmavi körfezi, yemyeşil yaylaları, köklü tarihi ve zengin kültürel mirasıyla keşfedilmeyi bekleyen bir Akdeniz ve Karadeniz köprüsü.</p>
+              <div class="hero-actions">
+                <a href="#gezilecek-yerler" class="btn btn-primary">Gezilecek Yerleri Keşfet</a>
+                <a href="#genel-bilgiler" class="btn btn-outline">Tarihini Öğren</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slayt 2 -->
+        <div class="hero-slide">
+          <img src="assets/img/hero/kocaeli-hero-2.jpg" alt="Kartepe Karlı Dağları" class="hero-img">
+          <div class="hero-overlay"></div>
+          <div class="container hero-content-container">
+            <div class="hero-content">
+              <h1 class="hero-title">Kış Turizminin Zirvesi: Kartepe</h1>
+              <p class="hero-lead">Samanlı Dağları'nın eşsiz zirvesinde, Marmara'nın en popüler kayak pistlerinde unutulmaz bir kış macerası ve kar şöleni yaşayın.</p>
+              <div class="hero-actions">
+                <a href="#gezilecek-yerler" class="btn btn-primary">Pistleri Keşfet</a>
+                <a href="#cografya" class="btn btn-outline">Coğrafyayı İncele</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slayt 3 -->
+        <div class="hero-slide">
+          <img src="assets/img/hero/kocaeli-hero-3.jpg" alt="Ormanya Doğal Parkı" class="hero-img">
+          <div class="hero-overlay"></div>
+          <div class="container hero-content-container">
+            <div class="hero-content">
+              <h1 class="hero-title">Doğanın Huzurlu Kolları: Ormanya</h1>
+              <p class="hero-lead">Masalsı Hobbit evleri, yaban hayat koruma alanları ve kilometrelerce uzanan meşe ormanı yollarıyla doğayla baş başa kalın.</p>
+              <div class="hero-actions">
+                <a href="#gezilecek-yerler" class="btn btn-primary">Ormanya'yı Keşfet</a>
+                <a href="#kultur" class="btn btn-outline">Kültürü Keşfet</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Slider Gösterge Çubukları (Progress Bars) -->
+      <div class="hero-progress-dots" id="heroDots">
+        <div class="hero-progress-dot active" data-slide="0">
+          <div class="hero-progress-fill"></div>
+        </div>
+        <div class="hero-progress-dot" data-slide="1">
+          <div class="hero-progress-fill"></div>
+        </div>
+        <div class="hero-progress-dot" data-slide="2">
+          <div class="hero-progress-fill"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Genel Tanıtım ve Tarihçe Bölümü -->
+    <section id="genel-bilgiler" class="section bg-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Şehri Yakından Tanıyın</span>
+          <h2 class="section-title">Genel Tanıtım ve Tarihçe</h2>
+          <div class="section-divider"></div>
+        </div>
+        
+        <div class="grid grid-2">
+          <div class="card card-info">
+            <h3>Kocaeli Hakkında Genel Bilgiler</h3>
+            <p><strong>Bölge:</strong> Marmara Bölgesi (Çatalca-Kocaeli Bölümü)</p>
+            <p><strong>Nüfus:</strong> Yaklaşık 2 Milyon</p>
+            <p><strong>Plaka Kodu:</strong> 41</p>
+            <p>Kocaeli, Asya ile Avrupa'yı birbirine bağlayan önemli kara, demir ve deniz yolu koridorlarının kavşağında yer almaktadır. Ülkemizin en büyük sanayi merkezlerinden biri olmasının yanı sıra, tarım, turizm ve eğitim alanlarında da öncü bir konumdadır.</p>
+          </div>
+          
+          <div class="card card-info">
+            <h3>Köklü Bir Tarihsel Miras</h3>
+            <p>Kocaeli'nin bilinen tarihi antik çağlara kadar uzanır. M.Ö. 264 yılında kurulan <strong>Nicomedia</strong> (bugünkü İzmit), Roma İmparatorluğu'nun doğu başkentliğini yapmış, dünyanın en büyük metropollerinden biri olmuştur.</p>
+            <p>Osmanlı Devleti döneminde Akçakoca tarafından fethedilen şehir, İstanbul'un fethinden sonra önemli bir tersane ve ticaret limanı haline gemiştir. Cumhuriyet döneminde ise sanayileşmenin lokomotifi olmuş ve Kocaeli adını almıştır.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coğrafi Özellikler Bölümü -->
+    <section id="cografya" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Yeryüzü Şekilleri ve İklim</span>
+          <h2 class="section-title">Coğrafi Özellikler</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="cografya-layout">
+          <div class="cografya-text">
+            <p>Kocaeli, Marmara Bölgesi'nin doğusunda yer alır. Kuzeyinde Karadeniz, doğusunda Sakarya, güneyinde Bursa, batısında ise Yalova ve İstanbul illeri ile komşudur. Şehir, İzmit Körfezi etrafında şekillenmiş olup, hem Karadeniz'e hem de Marmara Denizi'ne kıyısı olan nadir illerimizdendir.</p>
+            <div class="geo-highlights">
+              <div class="geo-item">
+                <span class="geo-icon">🏔️</span>
+                <div>
+                  <h4>Samanlı Dağları ve Kartepe</h4>
+                  <p>Güneyinde uzanan Samanlı Dağları'nın en yüksek noktası olan Kartepe (1601 m), kış turizminin en önemli merkezlerindendir.</p>
+                </div>
+              </div>
+              <div class="geo-item">
+                <span class="geo-icon">🌊</span>
+                <div>
+                  <h4>İzmit Körfezi ve Karadeniz Kıyıları</h4>
+                  <p>Kuzeydeki Karadeniz kıyıları falezleri ve plajları ile ünlüyken, İzmit Körfezi sakin suları ve limanlarıyla ticari can damarıdır.</p>
+                </div>
+              </div>
+              <div class="geo-item">
+                <span class="geo-icon">🌦️</span>
+                <div>
+                  <h4>Geçiş İklimi</h4>
+                  <p>Karadeniz iklimi ile Akdeniz iklimi arasında geçiş özelliği gösterir. Yazlar sıcak, kışlar ise yağışlı ve serin geçer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cografya-visual">
+            <div class="map-mock">
+              <h4>Kocaeli Konum & İklim Şeması</h4>
+              <div class="map-compass">N</div>
+              <div class="map-zones">
+                <div class="zone zone-karadeniz">Karadeniz Kıyısı (Ilıman/Yağışlı)</div>
+                <div class="zone zone-merkez">İzmit & Körfez (Sanayi & Liman)</div>
+                <div class="zone zone-samanli">Kartepe & Samanlı Dağları (Karasal/Kar Yağışlı)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kültürel Özellikler ve Gelenekler Bölümü -->
+    <section id="kultur" class="section bg-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Köklü Değerler ve Yaşam</span>
+          <h2 class="section-title">Kültürel Özellikler ve Gelenekler</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card card-kultur">
+            <div class="card-kultur-icon">🧶</div>
+            <h3 class="card-kultur-title">Kandıra Bezi Dokumacılığı</h3>
+            <p class="card-kultur-desc">Kandıra ilçesinde keten ipliğinden tamamen el tezgahlarında dokunan geleneksel Kandıra Bezi, gözenekli yapısı ile terletmeyen, doğal ve tarihi bir kumaş türüdür.</p>
+          </div>
+
+          <div class="card card-kultur">
+            <div class="card-kultur-icon">🎪</div>
+            <h3 class="card-kultur-title">Geleneksel Pişmaniye Şenlikleri</h3>
+            <p class="card-kultur-desc">Kocaeli'de pişmaniye çekimi sadece bir tatlı üretimi değil, düğünlerde ve şenliklerde imece usulüyle yapılan eğlenceli bir kültürel ritüeldir.</p>
+          </div>
+
+          <div class="card card-kultur">
+            <div class="card-kultur-icon">🎭</div>
+            <h3 class="card-kultur-title">Yerel Halk Oyunları & Müzik</h3>
+            <p class="card-kultur-desc">Marmara ve Karadeniz kültürünün kesiştiği Kocaeli'de horon ve karşılama oyunları harmanlanır. Klarnet ve kemençe ezgileri yerel düğünlerin vazgeçilmezidir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gezilecek Yerler Bölümü -->
+    <section id="gezilecek-yerler" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Şehrin Rotalarını Keşfedin</span>
+          <h2 class="section-title">Gezilecek Yerler</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- JS Kategori Filtre Butonları -->
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">Tümü</button>
+          <button class="filter-btn" data-filter="doga">Doğa Parkları</button>
+          <button class="filter-btn" data-filter="tarihi">Tarih & Müze</button>
+        </div>
+
+        <!-- Kart Grid Yapısı -->
+        <div class="places-grid" id="placesGrid">
+          
+          <!-- Ormanya -->
+          <article class="place-card" data-category="doga">
+            <div class="place-image-container">
+              <img src="assets/img/places/ormanya.jpg" alt="Ormanya Doğal Yaşam Parkı Hobbit Evleri" class="place-img">
+            </div>
+            <div class="place-body">
+              <span class="badge badge-doga">Doğa Parkı</span>
+              <h3 class="place-title">Ormanya Doğal Yaşam Parkı</h3>
+              <p class="place-text">Avrupa'nın en büyük doğal yaşam parkı olan Ormanya, masalsı Hobbit evleri, yaban hayatı alanı, bisiklet parkurları ve kuş gözlem alanlarıyla doğayla iç içe bir gün sunar.</p>
+              <div class="place-tip">📌 <strong>Öneri:</strong> Hobbit evleri önünde sabah saatlerinde fotoğraf çekilmeyi unutmayın!</div>
+            </div>
+          </article>
+
+          <!-- Kartepe -->
+          <article class="place-card" data-category="doga">
+            <div class="place-image-container">
+              <img src="assets/img/places/kartepe_kayak.jpg" alt="Kartepe Kayak Merkezi Pistleri ve Telesiyej" class="place-img">
+            </div>
+            <div class="place-body">
+              <span class="badge badge-doga">Doğa Parkı</span>
+              <h3 class="place-title">Kartepe Kayak Merkezi</h3>
+              <p class="place-text">Samanlı Dağları'nın zirvesinde yer alan Kartepe, kışın kayak ve snowboard tutkunlarını ağırlarken; bahar ve yaz aylarında yayla havası ve doğa yürüyüşleri sunar.</p>
+              <div class="place-tip">📌 <strong>Öneri:</strong> Telesiyeje binerek Sapanca Gölü manzarasını zirveden izleyebilirsiniz.</div>
+            </div>
+          </article>
+
+          <!-- Saat Kulesi -->
+          <article class="place-card" data-category="tarihi">
+            <div class="place-image-container">
+              <img src="assets/img/places/saat_kulesi.jpg" alt="Tarihi İzmit Saat Kulesi" class="place-img">
+            </div>
+            <div class="place-body">
+              <span class="badge badge-tarihi">Tarih & Müze</span>
+              <h3 class="place-title">Tarihi İzmit Saat Kulesi</h3>
+              <p class="place-text">Sultan II. Abdülhamid'in tahta çıkışının 25. yılı anısına 1902 yılında İzmit Mutasarrıfı Musa Kazım Bey tarafından yaptırılan kule, şehrin en görkemli mimari simgesidir.</p>
+              <div class="place-tip">📌 <strong>Öneri:</strong> Kulenin çevresindeki asırlık çınarların altında çay içerek körfezi izleyin.</div>
+            </div>
+          </article>
+
+          <!-- Sekapark -->
+          <article class="place-card" data-category="doga">
+            <div class="place-image-container">
+              <img src="assets/img/places/Seka_Park.jpg" alt="Sekapark Sahil Parkı Palmiyeler ve Deniz Kıyısı" class="place-img">
+            </div>
+            <div class="place-body">
+              <span class="badge badge-doga">Doğa Parkı</span>
+              <h3 class="place-title">Sekapark Sahil Alanı</h3>
+              <p class="place-text">Eski SEKA Kâğıt Fabrikası arazisinin dönüştürülmesiyle kurulan Sekapark, devasa yeşil alanları, çocuk oyun parkları, bisiklet yolları ve kafe alanlarıyla halkın buluşma noktasıdır.</p>
+              <div class="place-tip">📌 <strong>Öneri:</strong> Akşamüstü deniz kenarında gün batımı yürüyüşü yapabilirsiniz.</div>
+            </div>
+          </article>
+
+          <!-- Gayret Gemi Müzesi -->
+          <article class="place-card" data-category="tarihi">
+            <div class="place-image-container">
+              <img src="assets/img/places/Gayret_Gemi_Müzesi.jpg" alt="TCG Gayret Gemi Müzesi" class="place-img">
+            </div>
+            <div class="place-body">
+              <span class="badge badge-tarihi">Tarih & Müze</span>
+              <h3 class="place-title">Gayret Gemi Müzesi</h3>
+              <p class="place-text">Uzun yıllar Türk Deniz Kuvvetleri'nde hizmet veren TCG Gayret Muhribi, İzmit sahilinde Türkiye'nin ilk müze savaş gemisi olarak ziyaretçilere denizcilik tarihini yaşatır.</p>
+              <div class="place-tip">📌 <strong>Öneri:</strong> Gemi içindeki kontrol odası ve telsiz kamarasını mutlaka gezin.</div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Yöresel Yemekler Bölümü -->
+    <section id="yemekler" class="section bg-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Meşhur Lezzetler</span>
+          <h2 class="section-title">Yöresel Yemekler</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="grid grid-4">
+          
+          <!-- Pişmaniye -->
+          <div class="food-card">
+            <div class="food-image-wrapper">
+              <img src="assets/img/foods/pismaniye-toplari.png" alt="Geleneksel Kocaeli Pişmaniyesi" class="food-img">
+            </div>
+            <div class="food-info">
+              <h3 class="food-title">İzmit Pişmaniyesi</h3>
+              <p class="food-desc">Kocaeli denince akla gelen ilk lezzet. Un, yağ ve şekerin usta ellerde tel tel çekilmesiyle yapılan hafif ve geleneksel saray tatlısıdır.</p>
+              <span class="food-tag">Coğrafi İşaretli</span>
+            </div>
+          </div>
+
+          <!-- Kandıra Yoğurdu -->
+          <div class="food-card">
+            <div class="food-image-wrapper">
+              <img src="assets/img/foods/kandira-manda-yogurdu_1.jpg" alt="Meşhur Kandıra Yoğurdu Manda Sütü" class="food-img">
+            </div>
+            <div class="food-info">
+              <h3 class="food-title">Kandıra Yoğurdu</h3>
+              <p class="food-desc">Kandıra'nın yemyeşil meralarında otlayan mandalardan elde edilen yoğun kıvamlı, kaymaklı ve hafif ekşimsi kendine has lezzeti olan meşhur yoğurdumuz.</p>
+              <span class="food-tag">Katkısız / Doğal</span>
+            </div>
+          </div>
+
+          <!-- Yarımca Kirazı -->
+          <div class="food-card">
+            <div class="food-image-wrapper">
+              <img src="assets/img/foods/kiraz.jpg" alt="Körfez Yarımca Kirazı İri Taneli" class="food-img">
+            </div>
+            <div class="food-info">
+              <h3 class="food-title">Yarımca Kirazı</h3>
+              <p class="food-desc">Körfez ilçesinde yetişen, iri taneli, sert yapılı, yüksek şeker oranı ve eşsiz aroması ile dünya çapında ün kazanmış tescilli meyvemiz.</p>
+              <span class="food-tag">Özel Lezzet</span>
+            </div>
+          </div>
+
+          <!-- Kandıra Dartısı (Hizalama Düzeltildi) -->
+          <div class="food-card">
+            <div class="food-image-wrapper">
+              <img src="assets/img/foods/kandira-dartisi_2.jpg" alt="Geleneksel Kandıra Dartısı Ezmesi" class="food-img">
+            </div>
+            <div class="food-info">
+              <h3 class="food-title">Kandıra Dartısı</h3>
+              <p class="food-desc">Süt kaymağının kaynatılıp katılaştırılmasıyla yapılan, kahvaltılarda ekmeğe sürülen veya yemeklere lezzet katan geleneksel sos / meze çeşididir.</p>
+              <span class="food-tag">Yerel Tarif</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Görsel Galeri Bölümü -->
+    <section id="galeri" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Fotoğraflarla Kocaeli</span>
+          <h2 class="section-title">Görsel Galeri</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Slider Yapısı -->
+        <div class="slider-wrapper">
+          <div class="slider" id="slider">
+            
+            <!-- Slayt 1 -->
+            <div class="slide active">
+              <div class="slide-title">İzmit Körfezi</div>
+              <img src="assets/img/gallery/izmit_korfezinde_günbatımı.jpg" alt="İzmit Körfezi'nde muhteşem gün batımı ve yelkenliler">
+            </div>
+
+            <!-- Slayt 2 -->
+            <div class="slide">
+              <div class="slide-title">Kartepe Kayak Merkezi</div>
+              <img src="assets/img/gallery/kartepe_kayak.jpg" alt="Kartepe Kayak Merkezi ve karlı çam ağaçları manzarası">
+            </div>
+
+            <!-- Slayt 3 -->
+            <div class="slide">
+              <div class="slide-title">Ormanya Doğal Yaşam Parkı</div>
+              <img src="assets/img/gallery/ormanya.jpg" alt="Ormanya Doğal Yaşam Parkı orman yolları ve geyikler">
+            </div>
+
+            <!-- Slayt 4 -->
+            <div class="slide">
+              <div class="slide-title">Tarihi Saat Kulesi</div>
+              <img src="assets/img/gallery/saat_kulesi.jpg" alt="Gece ışıklandırmasıyla göz kamaştıran İzmit Saat Kulesi">
+            </div>
+
+          </div>
+
+          <!-- Yön Butonları -->
+          <button class="slider-control prev" id="sliderPrev" aria-label="Önceki Görsel">&#10094;</button>
+          <button class="slider-control next" id="sliderNext" aria-label="Sonraki Görsel">&#10095;</button>
+
+          <!-- Nokta Göstergeleri (Dots) -->
+          <div class="slider-dots" id="sliderDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- İletişim / Öneri Formu Bölümü -->
+    <section id="iletisim" class="section bg-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Görüşleriniz Bizim İçin Önemli</span>
+          <h2 class="section-title">Öneri & İletişim Formu</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="form-wrapper">
+          <form id="contactForm" class="contact-form" novalidate>
+            
+            <!-- Ad Soyad -->
+            <div class="form-group">
+              <label for="fullName">Ad Soyad <span class="required">*</span></label>
+              <input type="text" id="fullName" name="fullName" placeholder="Lütfen adınızı ve soyadınızı giriniz">
+              <span class="error-feedback" id="fullNameError"></span>
+            </div>
+
+            <!-- E-posta -->
+            <div class="form-group">
+              <label for="email">E-posta Adresi <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="ornek@domain.com">
+              <span class="error-feedback" id="emailError"></span>
+            </div>
+
+            <!-- Konu -->
+            <div class="form-group">
+              <label for="subject">Konu <span class="required">*</span></label>
+              <select id="subject" name="subject">
+                <option value="">Lütfen bir konu seçiniz</option>
+                <option value="veri-hatasi">Bilgi Hataları Bildirimi</option>
+                <option value="oneri">Yeni Gezi/Yemek Önerisi</option>
+                <option value="diger">Diğer Sorular</option>
+              </select>
+              <span class="error-feedback" id="subjectError"></span>
+            </div>
+
+            <!-- Mesaj -->
+            <div class="form-group">
+              <label for="message">Mesajınız <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Görüş ve önerilerinizi buraya yazabilirsiniz (En az 10 karakter)"></textarea>
+              <div class="char-count"><span id="charNum">0</span> karakter</div>
+              <span class="error-feedback" id="messageError"></span>
+            </div>
+
+            <!-- Buton -->
+            <button type="submit" class="btn btn-primary btn-block">Mesajı Gönder</button>
+
+            <!-- Başarı / Genel Hata Bildirim Alanı -->
+            <div class="form-alert" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SAĞ TARAFTA AÇILIR GEZİ REHBERİ PANELİ -->
+  <!-- Sabit Buton -->
+  <button class="side-guide-btn" id="sideGuideBtn" aria-label="Gezi Rehberini Aç">
+    <span class="side-guide-icon">🗺️</span>
+    <span class="side-guide-text">Gezi Rehberi</span>
+  </button>
+
+  <!-- Açılır Panel -->
+  <aside class="side-guide-panel" id="sideGuidePanel" aria-hidden="true">
+    <div class="panel-header">
+      <h3>Kocaeli Rotaları</h3>
+      <button class="panel-close" id="panelClose" aria-label="Kapat">&times;</button>
+    </div>
+    <div class="panel-content">
+      
+      <!-- A) Gezi Rehberi İndirme Alanı -->
+      <div class="panel-section download-section">
+        <h4>Kocaeli Gezi Rehberi</h4>
+        <p>Kocaeli'nin doğa, kültür, sahil ve şehir rotalarını tek dosyada keşfedin.</p>
+        <a href="assets/docs/kocaeli-gezi-rehberi.pdf" class="btn btn-primary btn-block" target="_blank" download>Rehberi İndir (PDF)</a>
+      </div>
+
+      <!-- Öneri Rota Kartları -->
+      <div class="panel-routes">
+        
+        <!-- B) 1 Günlük İzmit Rotası -->
+        <div class="route-card">
+          <div class="route-header">
+            <span class="route-icon">🏙️</span>
+            <h5>1 Günlük İzmit Rotası</h5>
+          </div>
+          <p>Saat Kulesi'nden başlayarak Kasr-ı Hümayun Sarayı, tarihi İzmit sokakları ve Sekapark sahili boyunca keyifli bir yürüyüş günü.</p>
+        </div>
+
+        <!-- C) Doğa Rotası -->
+        <div class="route-card">
+          <div class="route-header">
+            <span class="route-icon">🌲</span>
+            <h5>Doğa Rotası</h5>
+          </div>
+          <p>Ormanya'da güne başlayıp, Kartepe zirvesinde temiz hava alın, ardından Maşukiye şelaleleri ve Yuvacık Barajı'nda doğayı hissedin.</p>
+        </div>
+
+        <!-- D) Sahil ve Fotoğraf Rotası -->
+        <div class="route-card">
+          <div class="route-header">
+            <span class="route-icon">📸</span>
+            <h5>Sahil ve Fotoğraf Rotası</h5>
+          </div>
+          <p>Sekapark sahil yollarından Karadeniz'e uzanın; Kerpe plajını ve Pembe Kayalar'ın nefes kesici gün batımını fotoğraflayın.</p>
+        </div>
+
+        <!-- E) Kültür ve Müze Rotası -->
+        <div class="route-card">
+          <div class="route-header">
+            <span class="route-icon">🏛️</span>
+            <h5>Kültür ve Müze Rotası</h5>
+          </div>
+          <p>Körfez kıyısındaki Gayret Gemi Müzesi'ni gezin, Kasr-ı Hümayun ve Saat Kulesi ile kentin tarihi kimliğini derinlemesine yaşayın.</p>
+        </div>
+
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sayfa Alt Bilgisi -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <h3>Kocaeli Tanıtım Portalı</h3>
+        <p>Bu web sitesi, Web Programlama dersi dönem projesi olarak Kocaeli ilini tanıtmak amacıyla hazırlanmıştır.</p>
+      </div>
+      <div class="footer-meta">
+        <p>Muhammet Berat Çelik</p>
+        <p>&copy; 2026 Tüm Hakları Saklıdır. Kütüphanesiz ve responsive olarak geliştirilmiştir.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Dosyası Bağlantısı -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
