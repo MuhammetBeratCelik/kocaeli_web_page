@@ -308,7 +308,7 @@
       </div>
     </section>
 
-    <!-- Yöresel Yemekler Bölümü -->
+    <!-- Yöresel Yemekler -->
     <section id="yemekler" class="section bg-light">
       <div class="container">
         <div class="section-header">
@@ -319,7 +319,6 @@
 
         <div class="grid grid-4">
           
-          <!-- Pişmaniye -->
           <div class="food-card">
             <div class="food-image-wrapper">
               <img src="assets/img/foods/pismaniye-toplari.png" alt="Geleneksel Kocaeli Pişmaniyesi" class="food-img">
@@ -331,7 +330,6 @@
             </div>
           </div>
 
-          <!-- Kandıra Yoğurdu -->
           <div class="food-card">
             <div class="food-image-wrapper">
               <img src="assets/img/foods/kandira-manda-yogurdu_1.jpg" alt="Meşhur Kandıra Yoğurdu Manda Sütü" class="food-img">
@@ -343,7 +341,6 @@
             </div>
           </div>
 
-          <!-- Yarımca Kirazı -->
           <div class="food-card">
             <div class="food-image-wrapper">
               <img src="assets/img/foods/kiraz.jpg" alt="Körfez Yarımca Kirazı İri Taneli" class="food-img">
@@ -355,7 +352,6 @@
             </div>
           </div>
 
-          <!-- Kandıra Dartısı (Hizalama Düzeltildi) -->
           <div class="food-card">
             <div class="food-image-wrapper">
               <img src="assets/img/foods/kandira-dartisi_2.jpg" alt="Geleneksel Kandıra Dartısı Ezmesi" class="food-img">
@@ -371,7 +367,7 @@
       </div>
     </section>
 
-    <!-- Görsel Galeri Bölümü -->
+    <!-- Görsel Galeri -->
     <section id="galeri" class="section">
       <div class="container">
         <div class="section-header">
@@ -380,29 +376,24 @@
           <div class="section-divider"></div>
         </div>
 
-        <!-- Slider Yapısı -->
         <div class="slider-wrapper">
           <div class="slider" id="slider">
             
-            <!-- Slayt 1 -->
             <div class="slide active">
               <div class="slide-title">İzmit Körfezi</div>
               <img src="assets/img/gallery/izmit_korfezinde_günbatımı.jpg" alt="İzmit Körfezi'nde muhteşem gün batımı ve yelkenliler">
             </div>
 
-            <!-- Slayt 2 -->
             <div class="slide">
               <div class="slide-title">Kartepe Kayak Merkezi</div>
               <img src="assets/img/gallery/kartepe_kayak.jpg" alt="Kartepe Kayak Merkezi ve karlı çam ağaçları manzarası">
             </div>
 
-            <!-- Slayt 3 -->
             <div class="slide">
               <div class="slide-title">Ormanya Doğal Yaşam Parkı</div>
               <img src="assets/img/gallery/ormanya.jpg" alt="Ormanya Doğal Yaşam Parkı orman yolları ve geyikler">
             </div>
 
-            <!-- Slayt 4 -->
             <div class="slide">
               <div class="slide-title">Tarihi Saat Kulesi</div>
               <img src="assets/img/gallery/saat_kulesi.jpg" alt="Gece ışıklandırmasıyla göz kamaştıran İzmit Saat Kulesi">
@@ -410,11 +401,9 @@
 
           </div>
 
-          <!-- Yön Butonları -->
           <button class="slider-control prev" id="sliderPrev" aria-label="Önceki Görsel">&#10094;</button>
           <button class="slider-control next" id="sliderNext" aria-label="Sonraki Görsel">&#10095;</button>
 
-          <!-- Nokta Göstergeleri (Dots) -->
           <div class="slider-dots" id="sliderDots">
             <span class="dot active" data-index="0"></span>
             <span class="dot" data-index="1"></span>
@@ -425,7 +414,7 @@
       </div>
     </section>
 
-    <!-- İletişim / Öneri Formu Bölümü -->
+    <!-- İletişim -->
     <section id="iletisim" class="section bg-light">
       <div class="container">
         <div class="section-header">
@@ -437,21 +426,18 @@
         <div class="form-wrapper">
           <form id="contactForm" class="contact-form" novalidate>
             
-            <!-- Ad Soyad -->
             <div class="form-group">
               <label for="fullName">Ad Soyad <span class="required">*</span></label>
               <input type="text" id="fullName" name="fullName" placeholder="Lütfen adınızı ve soyadınızı giriniz">
               <span class="error-feedback" id="fullNameError"></span>
             </div>
 
-            <!-- E-posta -->
             <div class="form-group">
               <label for="email">E-posta Adresi <span class="required">*</span></label>
               <input type="email" id="email" name="email" placeholder="ornek@domain.com">
               <span class="error-feedback" id="emailError"></span>
             </div>
 
-            <!-- Konu -->
             <div class="form-group">
               <label for="subject">Konu <span class="required">*</span></label>
               <select id="subject" name="subject">
@@ -463,7 +449,6 @@
               <span class="error-feedback" id="subjectError"></span>
             </div>
 
-            <!-- Mesaj -->
             <div class="form-group">
               <label for="message">Mesajınız <span class="required">*</span></label>
               <textarea id="message" name="message" rows="5" placeholder="Görüş ve önerilerinizi buraya yazabilirsiniz (En az 10 karakter)"></textarea>
@@ -471,10 +456,8 @@
               <span class="error-feedback" id="messageError"></span>
             </div>
 
-            <!-- Buton -->
             <button type="submit" class="btn btn-primary btn-block">Mesajı Gönder</button>
 
-            <!-- Başarı / Genel Hata Bildirim Alanı -->
             <div class="form-alert" id="formStatus"></div>
           </form>
         </div>
@@ -483,14 +466,12 @@
 
   </main>
 
-  <!-- SAĞ TARAFTA AÇILIR GEZİ REHBERİ PANELİ -->
-  <!-- Sabit Buton -->
+  <!-- Gezi Rehberi Yan Panel -->
   <button class="side-guide-btn" id="sideGuideBtn" aria-label="Gezi Rehberini Aç">
     <span class="side-guide-icon">🗺️</span>
     <span class="side-guide-text">Gezi Rehberi</span>
   </button>
 
-  <!-- Açılır Panel -->
   <aside class="side-guide-panel" id="sideGuidePanel" aria-hidden="true">
     <div class="panel-header">
       <h3>Kocaeli Rotaları</h3>
@@ -498,17 +479,14 @@
     </div>
     <div class="panel-content">
       
-      <!-- A) Gezi Rehberi İndirme Alanı -->
       <div class="panel-section download-section">
         <h4>Kocaeli Gezi Rehberi</h4>
         <p>Kocaeli'nin doğa, kültür, sahil ve şehir rotalarını tek dosyada keşfedin.</p>
         <a href="assets/docs/kocaeli-gezi-rehberi.pdf" class="btn btn-primary btn-block" target="_blank" download>Rehberi İndir (PDF)</a>
       </div>
 
-      <!-- Öneri Rota Kartları -->
       <div class="panel-routes">
         
-        <!-- B) 1 Günlük İzmit Rotası -->
         <div class="route-card">
           <div class="route-header">
             <span class="route-icon">🏙️</span>
@@ -517,7 +495,6 @@
           <p>Saat Kulesi'nden başlayarak Kasr-ı Hümayun Sarayı, tarihi İzmit sokakları ve Sekapark sahili boyunca keyifli bir yürüyüş günü.</p>
         </div>
 
-        <!-- C) Doğa Rotası -->
         <div class="route-card">
           <div class="route-header">
             <span class="route-icon">🌲</span>
@@ -526,7 +503,6 @@
           <p>Ormanya'da güne başlayıp, Kartepe zirvesinde temiz hava alın, ardından Maşukiye şelaleleri ve Yuvacık Barajı'nda doğayı hissedin.</p>
         </div>
 
-        <!-- D) Sahil ve Fotoğraf Rotası -->
         <div class="route-card">
           <div class="route-header">
             <span class="route-icon">📸</span>
@@ -535,7 +511,6 @@
           <p>Sekapark sahil yollarından Karadeniz'e uzanın; Kerpe plajını ve Pembe Kayalar'ın nefes kesici gün batımını fotoğraflayın.</p>
         </div>
 
-        <!-- E) Kültür ve Müze Rotası -->
         <div class="route-card">
           <div class="route-header">
             <span class="route-icon">🏛️</span>

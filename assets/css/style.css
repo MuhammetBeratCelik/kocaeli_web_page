@@ -1,9 +1,4 @@
-/* ==========================================================================
-   CSS TASARIM DOSYASI - KOCAELİ TANITIM PORTALI (GÜNCELLENMİŞ)
-   Bu dosya tamamen saf (vanilla) CSS ile yazılmıştır.
-   ========================================================================== */
-
-/* 1. CSS Değişkenleri ve Tasarım Sistemi */
+/* Tasarım Sistemi ve Değişkenler */
 :root {
   /* Statik Renkler */
   --color-primary: #0e7490;       /* Körfez Mavisi / Teal */
@@ -56,7 +51,7 @@ body.dark-mode {
   --light-bg-sec: #0b0f19;
 }
 
-/* 2. Temel Sıfırlamalar ve Yapı */
+/* Temel Ayarlar ve Sıfırlama */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -101,7 +96,7 @@ button, input, select, textarea {
   padding: 0 24px;
 }
 
-/* 3. Yardımcı Sınıflar (Utilities) */
+/* Yardımcı Sınıflar (Utilities) */
 .section {
   padding: 80px 0;
   transition: background-color var(--transition-normal);
@@ -205,7 +200,7 @@ button, input, select, textarea {
   border-radius: var(--radius-full);
 }
 
-/* 4. Header & Navigasyon */
+/* Header & Navigasyon */
 .header {
   position: absolute;
   top: 0;
@@ -429,7 +424,7 @@ button, input, select, textarea {
   }
 }
 
-/* 5. 3 Fotoğraflı Otomatik Hero Slider Bölümü */
+/* Hero Slider */
 .hero {
   position: relative;
   height: 100vh;
@@ -637,7 +632,7 @@ button, input, select, textarea {
   }
 }
 
-/* 6. Genel Bilgiler Kartı */
+/* Genel Bilgiler */
 .card-info {
   background-color: var(--color-card-bg);
   border-radius: var(--radius-md);
@@ -665,7 +660,7 @@ button, input, select, textarea {
   color: var(--color-heading-dyn);
 }
 
-/* 7. Coğrafi Özellikler */
+/* Coğrafi Özellikler */
 .cografya-layout {
   display: flex;
   flex-direction: column;
@@ -772,7 +767,7 @@ button, input, select, textarea {
   }
 }
 
-/* 8. Kültür Kartları */
+/* Kültür Kartları */
 .card-kultur {
   background-color: var(--color-card-bg);
   border-radius: var(--radius-md);
@@ -806,7 +801,7 @@ button, input, select, textarea {
   font-size: 0.9375rem;
 }
 
-/* 9. Gezilecek Yerler (Kart Filtreleme) */
+/* Gezilecek Yerler */
 .filter-container {
   display: flex;
   justify-content: center;
@@ -944,7 +939,7 @@ button, input, select, textarea {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 10. Yöresel Yemek Kartları (Hizalamalar Düzeltildi) */
+/* Yöresel Yemekler */
 .food-card {
   background-color: var(--color-card-bg);
   border-radius: var(--radius-md);
@@ -1011,7 +1006,7 @@ button, input, select, textarea {
   align-self: flex-start; /* Sola yaslı tutar */
 }
 
-/* 11. Görsel Galeri (Slider) */
+/* Görsel Galeri */
 .slider-wrapper {
   position: relative;
   width: 100%;
@@ -1122,7 +1117,7 @@ button, input, select, textarea {
   scale: 1.2;
 }
 
-/* 12. İletişim / Öneri Formu */
+/* İletişim / Öneri Formu */
 .form-wrapper {
   max-width: 600px;
   margin: 0 auto;
@@ -1238,8 +1233,7 @@ button, input, select, textarea {
   border: 1px solid #fca5a5;
 }
 
-/* 13. SAĞ GEZİ REHBERİ YAN PANELİ */
-/* Sabit Duran Yan Buton */
+/* Gezi Rehberi Yan Panel */
 .side-guide-btn {
   position: fixed;
   right: 0;
@@ -1409,7 +1403,7 @@ button, input, select, textarea {
   }
 }
 
-/* 14. Footer (Alt Bilgi) */
+/* Footer (Alt Bilgi) */
 .footer {
   background-color: #0b0f19; /* Her zaman koyu */
   color: #94a3b8;

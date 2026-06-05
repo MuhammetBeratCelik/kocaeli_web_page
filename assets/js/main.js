@@ -1,37 +1,15 @@
-/* ==========================================================================
-   JAVASCRIPT KOD DOSYASI - KOCAELİ TANITIM PORTALI (GÜNCELLENMİŞ)
-   Bu dosya tamamen kütüphanesiz (Vanilla JS) olarak yazılmıştır.
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
-  
-  // 1. Koyu / Açık Tema Değiştirici
+  // Projedeki modülleri başlat
   initThemeToggle();
-
-  // 2. Ana Kısımda 3 Fotoğraflı Otomatik Hero Slider
   initHeroSlider();
-
-  // 3. Sağ Tarafta Açılır Menü Sliderı (Side Panel)
   initSideGuidePanel();
-
-  // 4. Görsel Galeri Slider (Mevcut Özellik)
   initGallerySlider();
-
-  // 5. Gezilecek Yerler Kategori Filtreleme (Mevcut Özellik)
   initPlaceFilters();
-
-  // 6. İletişim Formu Doğrulama ve Karakter Sayacı (Mevcut Özellik)
   initFormValidation();
-
-  // 7. Mobil Menü Hamburger Yönetimi (Mevcut Özellik)
   initMobileMenu();
-
 });
 
-/**
- * 1. KOYU / AÇIK TEMA SLIDERI
- * Kullanıcının tema tercihini localStorage ile saklayarak koyu/açık tema geçişini sağlar.
- */
+// Koyu/Açık Tema Seçici ve localStorage yönetimi
 function initThemeToggle() {
   const themeToggleBtn = document.getElementById("themeToggleBtn");
   const themeToggleIcon = document.getElementById("themeToggleIcon");
@@ -70,10 +48,7 @@ function initThemeToggle() {
   });
 }
 
-/**
- * 2. ANA KISIMDA 3 FOTOĞRAFLI OTOMATİK HERO SLIDER
- * Hero alanında 3 fotoğrafın 4.5 saniyede bir yumuşak fade ile geçişini yönetir.
- */
+// Giriş alanındaki ana fotoğraf sliderı
 function initHeroSlider() {
   const slides = document.querySelectorAll(".hero-slide");
   const dots = document.querySelectorAll(".hero-progress-dot");
@@ -138,10 +113,7 @@ function initHeroSlider() {
   startHeroSlider();
 }
 
-/**
- * 3. SAĞ TARAFTA AÇILIR MENÜ PANELİ (GEZİ REHBERİ)
- * Sağ taraftaki butona basılınca Kocaeli Rotaları panelinin kayarak açılmasını sağlar.
- */
+// Sağ kenarda açılan gezi rehberi paneli
 function initSideGuidePanel() {
   const sideGuideBtn = document.getElementById("sideGuideBtn");
   const sideGuidePanel = document.getElementById("sideGuidePanel");
@@ -174,10 +146,7 @@ function initSideGuidePanel() {
   });
 }
 
-/**
- * 4. MEVCUT GÖRSEL GALERİ SLIDER
- * Sayfa altındaki 4 fotoğraflı galeri slider işlevidir.
- */
+// Alt kısımdaki resim galerisi sliderı
 function initGallerySlider() {
   const slides = document.querySelectorAll(".slide");
   const dots = document.querySelectorAll(".dot");
@@ -264,9 +233,7 @@ function initGallerySlider() {
   startAutoplay();
 }
 
-/**
- * 5. MEVCUT GEZİLECEK YERLER KATEGORİ FİLTRELEME
- */
+// Gezilecek yerler için filtreleme sistemi
 function initPlaceFilters() {
   const filterButtons = document.querySelectorAll(".filter-btn");
   const placeCards = document.querySelectorAll(".place-card");
@@ -295,9 +262,7 @@ function initPlaceFilters() {
   });
 }
 
-/**
- * 6. MEVCUT İLETİŞİM FORMU DOĞRULAMA (VALIDATION) & SAYAÇ
- */
+// İletişim formu kontrolü ve karakter sayacı
 function initFormValidation() {
   const form = document.getElementById("contactForm");
   const charNumSpan = document.getElementById("charNum");
@@ -430,9 +395,7 @@ function initFormValidation() {
   }
 }
 
-/**
- * 7. MEVCUT MOBİL MENÜ HAMBURGER YÖNETİMİ
- */
+// Mobil menü açma/kapama ve scroll takibi
 function initMobileMenu() {
   const navToggle = document.getElementById("navToggle");
   const navBar = document.getElementById("navBar");
